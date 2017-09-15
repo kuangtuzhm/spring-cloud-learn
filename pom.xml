@@ -32,7 +32,6 @@
     <module>config-client</module>
     <module>eureka-server</module>
     <module>eureka-client</module>
-    <module>ribbon</module>
     <module>balance-feign</module>
     <module>balance-ribbon</module>
   </modules>
