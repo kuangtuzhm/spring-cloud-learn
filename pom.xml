@@ -31,5 +31,6 @@
   	<module>config-server</module>
     <module>config-client</module>
     <module>eureka-server</module>
+    <module>eureka-client</module>
   </modules>
 </project>
