@@ -33,6 +33,7 @@
     <module>eureka-server</module>
     <module>eureka-client</module>
     <module>balance-feign</module>
+    <module>balance-feign-hystrix</module>
     <module>balance-ribbon</module>
   </modules>
 </project>
