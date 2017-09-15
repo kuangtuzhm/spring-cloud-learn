@@ -1,4 +1,4 @@
-package com.zealot;
+package org.balance.ribbon;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
