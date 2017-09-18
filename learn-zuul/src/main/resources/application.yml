@@ -1,0 +1,17 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8830/eureka/
+server:
+  port: 8845
+spring:
+  application:
+    name: learn-zuul
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: balance-ribbon
+    api-b:
+      path: /api-b/**
+      serviceId: balance-feign
