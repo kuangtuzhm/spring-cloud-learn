@@ -35,6 +35,5 @@
     <module>balance-feign</module>
     <module>balance-feign-hystrix</module>
     <module>balance-ribbon</module>
-    <module>spring-boot-example</module>
   </modules>
 </project>
