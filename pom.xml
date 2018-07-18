@@ -14,7 +14,7 @@
   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   	 <!-- 想使用不同版本的JDK 覆盖spring-boot-starter-parent下的配置-->
-    <java.version>1.7</java.version>
+    <java.version>1.8</java.version>
   </properties>
   <dependencyManagement>
 		<dependencies>
