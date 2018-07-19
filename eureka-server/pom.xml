@@ -16,25 +16,14 @@
     <java.version>1.8</java.version>
   </properties>
   <dependencies>
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-logging</artifactId>
+</dependency>
     <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>
-		<dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-gradle-plugin</artifactId>
-		    <version>1.5.7.RELEASE</version>
-		</dependency>
-        <!--暴露各种指标-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka-server</artifactId>
-        </dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+    </dependency>
   </dependencies>
   <build>
 		<finalName>eureka-server</finalName>
@@ -64,6 +53,7 @@
 					<includes></includes>
 					<excludes>
 						<exclude>*.properties</exclude>
+						<exclude>*.xml</exclude>
 					</excludes>
 					<outputDirectory>target/${project.name}/</outputDirectory>
 				</configuration>
@@ -78,8 +68,8 @@
 					<executable>true</executable>
 					<includes>
 						<include>
-							<groupId>com.jimi</groupId>
-							<artifactId>rtv-os</artifactId>
+							<groupId>com.zealot</groupId>
+							<artifactId>eureka-server</artifactId>
 						</include>
 					</includes>
 					<outputDirectory>target/${project.name}/</outputDirectory>
@@ -122,6 +112,7 @@
 									<directory>src/main/resources</directory>
 									<includes>
 										<include>**/*.properties</include>
+										<include>**/*.xml</include>
 									</includes>
 								</resource>
 							</resources>
