@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 	<!-- 环境变量 -->
-	<springProperty name="logLevel" scope="context" source="logging.level.root" />
-	<springProperty name="logPath" scope="context" source="logging.path" />
-
+	<springProperty name="logLevel" scope="context" source="logging.level.root" defaultValue="info" />
+	<springProperty name="logPath" scope="context" source="logging.path" defaultValue="logs" />
+	<jmxConfigurator/>
 	<!-- 控制台输出 -->
 	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
@@ -52,10 +52,11 @@
 			<pattern>%d [%thread] %-5level %logger{50} - %msg%n</pattern>
 		</encoder>
 	</appender>
-	<!-- 日志输出级别 -->
+    <!-- 日志输出级别 -->
 	<root level="${logLevel}">
-		<!-- <appender-ref ref="console" /> -->
+		<appender-ref ref="console" />
 		<appender-ref ref="dailyRolling" />
 		<appender-ref ref="errorDailyRolling" />
 	</root>
+	
 </configuration>
