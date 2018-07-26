@@ -36,5 +36,7 @@
     <module>balance-feign</module>
     <module>balance-feign-hystrix</module>
     <module>balance-ribbon</module>
+    <module>balance-ribbon-hystrix</module>
+    <module>module-admin</module>
   </modules>
 </project>

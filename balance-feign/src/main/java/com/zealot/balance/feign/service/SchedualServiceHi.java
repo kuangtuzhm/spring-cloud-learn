@@ -1,6 +1,8 @@
 package com.zealot.balance.feign.service;
 
-import org.springframework.cloud.netflix.feign.FeignClient;
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,5 +11,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface SchedualServiceHi {
 
 	@RequestMapping(value = "/hi",method = RequestMethod.GET)
-	String sayHiFromClientOne(@RequestParam(value = "name") String name);
+	String hi(@RequestParam(value = "name") String name);
+	
+	@RequestMapping(value = "/mytest",method = RequestMethod.GET)
+	String myTest();
+	
+	@RequestMapping(value = "/getList",method = RequestMethod.GET)
+	List<String> getList();
 }
